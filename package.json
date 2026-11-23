@@ -1,14 +1,20 @@
 {
-    "name": "@robert.tools/sample",
-    "version": "1.1.10",
-    "description": "<description>",
+    "name": "@robert.tools/organism-footer",
+    "version": "1.0.0",
+    "description": "Provides a standardized footer.",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
-        ".": "./dist/index.js"
+        ".": {
+            "default": "./dist/index.js"
+        },
+        "./index.njk": "./src/index.njk",
+        "./index.css": "./src/index.css"
     },
     "files": [
-        "dist"
+        "dist",
+        "src/index.njk",
+        "src/index.css"
     ],
     "scripts": {
         "init": "robi init",
@@ -25,20 +31,20 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/robert-tools/<name>.git"
+        "url": "git+https://github.com/robert-tools/organism-footer.git"
     },
     "bugs": {
-        "url": "https://github.com/robert-tools/<name>/issues"
+        "url": "https://github.com/robert-tools/organism-footer/issues"
     },
-    "homepage": "https://github.com/robert-tools/<name>#readme",
+    "homepage": "https://github.com/robert-tools/organism-footer#readme",
     "keywords": [
         "typescript",
         "node",
-        "<name>",
+        "organism-footer",
         "robert.tools"
     ],
-    "author": "<author>",
-    "license": "<license>",
+    "author": "Robert Willemelis",
+    "license": "MIT",
     "engines": {
         "node": ">=22"
     },

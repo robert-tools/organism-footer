@@ -1,29 +1,65 @@
-# 🗂️ @robert.tools/sample
+# 🗂️ @robert.tools/organism-footer
 
-<description>
+Provides a standardized footer.
 
 ## 📜 Usage
 
 ### 🟢 Installation
 
 ```bash
-npm install @robert.tools/sample
+npm install @robert.tools/organism-footer
 ```
 
 ### 📝 Sample usage
 
-```typescript
-import { <name> } from '@robert.tools/sample';
+#### prerequisites
 
-<name>('hello'); // '<name>: hello'
+- define css variables
+
+#### depending filters
+
+- [safeParam](https://github.com/robert-tools/eleventy-filter-safe-param)
+
+#### depending components
+
+- [atom-text](https://github.com/robert-tools/atom-text)
+- [molecule-link](https://github.com/robert-tools/molecule-link)
+
+#### Template
+
+Use the footer component as shown below:
+
+```html
+{{ component("organism/footer", {
+    prefix: "2026 Made By",
+    text: "Robert Willemelis",
+    css: "text-danger",
+    url: "https://robert.berlin"
+}) }}
 ```
 
-## 🗃️ commands
+##### ⚙️ parameter
 
-After an npm install with `npm i` the following commands are available:
+- **prefix**: text before a link
+- **text**: text within the link, when url defined
+- **css**: overwrite css class for the text
+- **url**: url of the link
 
-* initialize placeholders: `npm run init <semantic>`
-* release a new version: `npm run release <semantic>`
+#### CSS
+
+Use the basic styling
+
+```css
+@import '@robert.tools/organism-footer/src/index.css';
+```
+
+#### TypeScript
+
+Include TypeScript by importing the component
+
+```typescript
+import * as OrganismFooter from '@robert.tools/organism-footer';
+```
 
 ## ⚖️ Notes
 

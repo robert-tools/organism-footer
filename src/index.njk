@@ -1,0 +1,31 @@
+{% set prefix = params.prefix | safeParam() %}
+{% set suffix = params.suffix | safeParam() %}
+{% set text = params.text | safeParam() %}
+{% set url = params.url %}
+{% set text_css = "" %}
+{% set css = params.css if params.css is defined else text_css %}
+
+<footer class="footer">
+    <div class="container text-center">
+      {# Prefix text #}
+      {{ component("atom/text", { text: prefix, css: css }) }}
+
+      {# Link or text #}
+      {% if url and text is defined %}
+       {{ 
+          component( "molecule/link", { 
+            text: text, 
+            css: css, 
+            target: "_blank",
+            url: url 
+          }) 
+      }}
+      {% elif text is defined %}
+        {{ component("atom/text", { text: text, css: css }) }}
+      {% endif %}
+
+      {# Suffix text #}
+      {{ component("atom/text", { text: suffix, css: "text-muted" }) }}
+      <br />
+    </div>
+</footer>
