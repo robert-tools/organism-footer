@@ -10,20 +10,17 @@ Provides a standardized footer.
 npm install @robert.tools/organism-footer
 ```
 
+#### 🔐 dependencies
+
+- [atom-text](https://github.com/robert-tools/atom-text)
+- [molecule-link](https://github.com/robert-tools/molecule-link)
+- [safeParam](https://github.com/robert-tools/eleventy-filter-safe-param)
+
 ### 📝 Sample usage
 
 #### prerequisites
 
 - define css variables
-
-#### depending filters
-
-- [safeParam](https://github.com/robert-tools/eleventy-filter-safe-param)
-
-#### depending components
-
-- [atom-text](https://github.com/robert-tools/atom-text)
-- [molecule-link](https://github.com/robert-tools/molecule-link)
 
 #### Template
 

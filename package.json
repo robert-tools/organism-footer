@@ -1,6 +1,6 @@
 {
     "name": "@robert.tools/organism-footer",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Provides a standardized footer.",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
